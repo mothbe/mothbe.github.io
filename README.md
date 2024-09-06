@@ -20,3 +20,14 @@ hugo new posts/second-post.md
 ```
 hugo serve -D
 ```
+
+5. Set in new post `draft: false`
+6, Build html files:
+```
+hugo
+```
+
+7. Start HTTP server and verify posts:
+```
+python3 -m http.server -d public
+```
