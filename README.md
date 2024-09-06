@@ -5,6 +5,7 @@
 1. Clone repository:
 ```
 git clone git@github.com:mothbe/mothbe.github.io.git
+cd mothbe/mothbe.github.io
 git submodule init
 git submodule update
 ```
