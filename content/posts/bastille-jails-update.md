@@ -1,7 +1,7 @@
 ---
 title: "Bastille Jails Update"
 date: 2024-09-06T16:42:41+02:00
-draft: true
+draft: false
 ---
 
 Before update Jail execute switch to `root`:
