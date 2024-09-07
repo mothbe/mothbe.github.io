@@ -1,6 +1,7 @@
 baseURL = 'https://mothbe.github.io/'
+copyright = "© 2024 Tech Notes. All rights reserved"
 languageCode = 'en-us'
-title = 'Nothing personal'
+title = 'Tech Notes'
 theme = "m10c"
 paginate = 8
 
@@ -22,14 +23,23 @@ paginate = 8
 #    weight = 3
 
 [params]
-  author = "Marcin Witowski"
   description = "Follow the one who follows the white rabbit."
   menu_item_separator = " - "
+
   [[params.social]]
     icon = "github"
     name = "Github"
     url = "https://github.com/mothbe"
 
+  [[params.social]]
+    icon = "gitlab"
+    name = "Github"
+    url = "https://bitbucket.com/mothbe"
+
+  [[params.social]]
+    icon = "rss"
+    name = "RSS"
+    url = "/feed.xml"
   # Default theme
   #[params.style]
   #  darkestColor = "#242930"
@@ -53,3 +63,12 @@ paginate = 8
   lightColor = "#d6d6d6"
   lightestColor = "#d3d3d3"
   primaryColor = "#ffffff"
+
+[outputs]
+home = ["HTML", "RSS"]
+page = ["HTML", "RSS"]
+
+[outputFormats]
+[outputFormats.RSS]
+mediatype = "application/rss+xml"
+baseName = "feed"
