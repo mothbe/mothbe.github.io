@@ -2,15 +2,18 @@
 title: "Bastille Jails Update"
 date: 2024-09-06T16:42:41+02:00
 draft: false
+tags:
+  - freebsd
+  - jails
 ---
 
-Before update Jail execute switch to `root`:
-```
-sudo sudo -i
+Before Jails update, execute following command to switch to `root` account:
+```bash
+sudo -i
 ```
 
-1. Update Bastille FreeBSD release:
-```
+1. Update FreeBSD release in Bastille:
+```bash
 bastille bootstrap 13.3-RELEASE update
 ```
 Output:
@@ -41,9 +44,9 @@ Scanning /usr/local/bastille/releases/13.3-RELEASE/usr/share/certs/trusted for c
  done.
 ```
 
-2. Update packages in Jail managed by Bastille:
-- dry mode:
-```
+2. Update packages in Jails:
+- use `dry mode` to view proposed changes
+```bash
 for jail in  `bastille list | awk '{print $2}' |grep -v IP ` ; do pkg -j $jail upgrade -n ; done                                              
 ```
 
@@ -70,12 +73,14 @@ Updating FreeBSD repository catalogue...
 ...
 ```
 
-- upgrade packages
-```
+- update/install packages
+```bash
 for jail in  `bastille list | awk '{print $2}' |grep -v IP ` ; do pkg -j $jail upgrade  -y ; done
 ```
 
-3. Restart Jails:
-```
+3. Restart all Jails:
+```bash
 for jail in  `bastille list | awk '{print $2}' |grep -v IP ` ; do bastille restart $jail ; done
 ```
+
+4. Bastille Jails Update has been completed!
