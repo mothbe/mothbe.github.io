@@ -5,6 +5,8 @@ draft: false
 tags:
   - freebsd
   - jails
+categories:
+  - sysops
 ---
 
 Before Jails update, execute following command to switch to `root` account:

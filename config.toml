@@ -2,7 +2,7 @@ baseURL = 'https://mothbe.github.io/'
 copyright = "© 2024 Tech Notes. All rights reserved"
 languageCode = 'en-us'
 title = 'Tech Notes'
-theme = "m10c"
+theme = "hugo-flex"
 paginate = 8
 
 [menu]
@@ -12,63 +12,37 @@ paginate = 8
     url = "/"
     weight = 1
   [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts"
+    weight = 2
+  [[menu.main]]
     identifier = "tags"
     name = "Tags"
-    url = "/tags/"
-    weight = 2
+    url = "/tags"
+    weight = 3
+  [[menu.main]]
+    identifier = "rss"
+    name = "RSS"
+    url = "/feed.xml"
+    weight = 4
+     [[menu.main.params]]
+     format = "rss" 
+ [[menu.main]]
+    identifier = "categories"
+    name = "Categories"
+    url = "/categories"
+    weight = 5
 #  [[menu.main]]
 #    identifier = "about"
 #    name = "About"
 #    url = "/about/"
 #    weight = 3
 
-[params]
-  description = "Follow the one who follows the white rabbit."
-  menu_item_separator = " - "
-
-  [[params.social]]
-    icon = "github"
-    name = "Github"
-    url = "https://github.com/mothbe"
-
-  [[params.social]]
-    icon = "gitlab"
-    name = "Github"
-    url = "https://bitbucket.com/mothbe"
-
-  [[params.social]]
-    icon = "rss"
-    name = "RSS"
-    url = "/feed.xml"
-  # Default theme
-  #[params.style]
-  #  darkestColor = "#242930"
-  #  darkColor = "#353b43"
-  #  lightColor = "#afbac4"
-  #  lightestColor = "#ffffff"
-  #  primaryColor = "#57cc8a"
-
-  # Green theme
-  #[params.style]
-  #  darkestColor = "#315659"
-  #  darkColor = "#253031"
-  #  lightColor = "#96a879"
-  #  lightestColor = "#fff"
-  #  primaryColor = "#dad865"
-
-  # Red theme
-[params.style]
-  darkestColor = "#d35050"
-  darkColor = "#212121"
-  lightColor = "#d6d6d6"
-  lightestColor = "#d3d3d3"
-  primaryColor = "#ffffff"
-
 [outputs]
 home = ["HTML", "RSS"]
 page = ["HTML", "RSS"]
 
-[outputFormats]
 [outputFormats.RSS]
 mediatype = "application/rss+xml"
 baseName = "feed"

@@ -1,0 +1,1 @@
+docker run --rm -p 1313:1313 -v ${PWD}:/src hugomods/hugo:0.118.2 hugo server --bind 0.0.0.0 -p 1313

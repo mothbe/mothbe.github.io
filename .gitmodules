@@ -1,4 +1,3 @@
-[submodule "themes/m10c"]
-	path = themes/m10c
-	url = https://github.com/mothbe/hugo-theme-m10c.git
-	branch = dev
+[submodule "themes/hugo-flex"]
+	path = themes/hugo-flex
+	url = https://github.com/mothbe/hugo-flex.git
