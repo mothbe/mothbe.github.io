@@ -4,7 +4,6 @@ date: 2025-04-13T23:03:04+02:00
 draft: false
 tags:
   - freebsd
-  - jails
 categories:
   - sysops
 ---
