@@ -1,6 +1,6 @@
 baseURL = 'https://mothbe.github.io/'
 copyright = "© 2024 Tech Notes. All rights reserved"
-languageCode = 'en-us'
+languageCode = 'pl'
 title = 'Tech Notes'
 theme = "hugo-flex"
 paginate = 8
