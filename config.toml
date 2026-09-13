@@ -2,8 +2,12 @@ baseURL = 'https://mothbe.github.io/'
 copyright = "© 2024 Tech Notes. All rights reserved"
 languageCode = 'pl'
 title = 'Tech Notes'
-theme = "hugo-PaperMod"
+theme = 'rusty-typewriter'
 paginate = 8
+
+
+[params.rtwt.home]
+showBio = false
 
 [menu]
 [[menu.main]]
